@@ -1,13 +1,36 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
+import { FronteggAppService, FronteggAuthService } from '@frontegg/angular';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-hosted-login';
+  isLoading = true;
+  loadingSubscription: Subscription;
+
+  constructor(
+    private router: Router,
+    private fronteggAuthService: FronteggAuthService,
+    private fronteggAppService: FronteggAppService
+  ) {
+    this.loadingSubscription = fronteggAppService.isLoading$.subscribe(
+      (isLoading) => (this.isLoading = isLoading)
+    );
+  }
+
+  ngOnInit(): void {
+    this.fronteggAuthService.isAuthenticatedSubject.subscribe((isAuthenticated) => {
+      if (isAuthenticated) {
+        this.router.navigate(['/account']);
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.loadingSubscription.unsubscribe();
+  }
 }

@@ -1,27 +1,51 @@
-# AngularHostedLogin
+![Angular Hosted Login Banner](/src/assets/angular-banner.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+# Angular Hosted Login Sample
 
-## Development server
+This sample demonstrates how to add authentication to an Angular application using Frontegg's Hosted Login solution.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requirements
 
-## Code scaffolding
+- [Node.js](https://nodejs.org)
+- npm (comes with Node.js)
+- A Frontegg account. [Sign up for free](https://portal.frontegg.com/signup).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
 
-## Build
+### 1. Configure Frontegg Application
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Go to [Frontegg Portal](https://portal.frontegg.com/)
+2. Configure your application settings
+3. Get your Client ID and API key from the Frontegg Portal
 
-## Running unit tests
+### 2. Configuration
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project comes with pre-configured test credentials in `/config/sandboxContextOptions.ts`. These credentials are set up for demonstration purposes, allowing you to test the authentication flow immediately.
 
-## Running end-to-end tests
+When deploying to production, make sure to replace these test credentials with your own Frontegg application credentials in `/config/sandboxContextOptions.ts`. Use environment variables to store your credentials.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 3. Install Dependencies
 
-## Further help
+Run the following commands:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm install
+```
+
+### 4. Run the Application
+
+To start the application, run:
+
+```bash
+ng serve
+```
+
+The app will be available at [http://localhost:4200](http://localhost:4200).
+
+## What is Happening?
+
+This application demonstrates:
+
+- Implementing Frontegg's Hosted Login in Angular
+- Managing user authentication state with Angular services
+- Accessing user profile information through Frontegg's Angular SDK
