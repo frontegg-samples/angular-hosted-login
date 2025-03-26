@@ -61,7 +61,12 @@
         <div class="tenant-info">
           <div class="tenant-info-item">
             <p class="tenant-info-item-title">ID</p>
-            <p class="tenant-info-item-value">{{ activeTenant.id }}</p>
+            <div class="tenant-info-copy-wrapper">
+              <p class="tenant-info-item-value ellipsis">
+                {{ activeTenant.id }}
+              </p>
+              <app-copy-button [text]="activeTenant.id" />
+            </div>
           </div>
           <div class="tenant-info-item">
             <p class="tenant-info-item-title">Members</p>

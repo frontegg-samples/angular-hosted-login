@@ -69,9 +69,17 @@
   gap: 8px;
   align-items: center;
 }
+
+.visit-doc svg {
+  transition: all 0.3s ease;
+}
+
 .visit-doc:hover,
-.visit-doc:active {
-  color: var(--classic-darker-primary);
+.visit-doc:active,
+.visit-doc:hover svg,
+.visit-doc:active svg {
+  fill: var(--classic-primary);
+  color: var(--classic-primary);
 }
 
 .icon-link {
@@ -80,10 +88,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 25%;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
 .icon-link:hover {
-  background-color: var(--classic-light-info);
+  background-color: var(--classic-grey-100);
 }

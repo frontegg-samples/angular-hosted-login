@@ -16,6 +16,11 @@ body,
   font-family: "Manrope", sans-serif;
 }
 
+body {
+  overflow: auto;
+  height: 100%;
+}
+
 :root {
   --classic-grey-800: #373739;
   --classic-grey-700: #7a7c81;
@@ -34,9 +39,9 @@ body,
 
 .container {
   margin: 0 auto;
-  width: calc(100% - 40px);
-  max-width: 1760px;
+  width: calc(100% - 80px);
 }
+
 
 .section-screen {
   display: flex;
@@ -44,6 +49,7 @@ body,
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  padding: 130px 0;
 }
 
 .section-card {
@@ -56,6 +62,7 @@ body,
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  background-color: var(--classic-white);
 }
 
 .fit-content {
@@ -115,6 +122,12 @@ body,
   background-color: var(--classic-grey-200);
   color: var(--classic-grey-700);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: calc(100% - 160px);
+  }
 }

@@ -11,6 +11,7 @@ import { TenantsDropdownComponent } from '../components/tenants-dropdown/tenants
 import { AccountInfoComponent } from './account-info/account-info.component';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { CopyButtonComponent } from '../components/copy-button/copy-button.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,7 @@ const routes: Routes = [
     TenantsDropdownComponent,
     AccountInfoComponent,
     HeaderComponent,
+    CopyButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,15 +39,14 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: false }),
     FronteggAppModule.forRoot({
       contextOptions: sanboxContextOptions,
-      hostedLoginBox: true,
+      hostedLoginBox: true
     }),
   ],
   exports: [
-    WelcomeComponent,
     SignupBannerComponent,
     TenantsDropdownComponent,
-    AccountInfoComponent,
     HeaderComponent,
+    CopyButtonComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -10,7 +10,7 @@
 }
 
 .welcome-title {
-  font-size: 30px;
+  font-size: 32px;
   line-height: 140%;
   font-weight: 700;
   color: var(--grey-900);
@@ -19,7 +19,7 @@
 
 .welcome-text {
   font-size: 16px;
-  line-height: 120%;
+  line-height: 150%;
   font-weight: 400;
   color: var(--grey-600);
   text-align: center;
