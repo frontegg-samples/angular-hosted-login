@@ -4,8 +4,7 @@ import { Subscription } from 'rxjs';
 
 const DEFAULT_SANDBOX_CONTEXT = {
   baseUrl: 'https://sandbox.frontegg.com',
-  clientId: '9af126b9-c35f-4e2d-a3f1-c261e22aaf4a',
-  appId: 'xxxx',
+  appId: 'da398ff8-c069-428e-974a-afcded8c0c04',
 };
 
 @Component({
@@ -22,10 +21,10 @@ export class SignupBannerComponent {
       (isLoading) => {
         if (isLoading) return;
         const baseUrl = ContextHolder.for(undefined as any).getContext().baseUrl;
-        const clientId = ContextHolder.for(undefined as any).getContext().clientId;
+        const appId = ContextHolder.for(undefined as any).getContext().appId;
         this.isDefaultCredentials =
           baseUrl === DEFAULT_SANDBOX_CONTEXT.baseUrl &&
-          clientId === DEFAULT_SANDBOX_CONTEXT.clientId;
+          appId === DEFAULT_SANDBOX_CONTEXT.appId;
       }
     );
   }

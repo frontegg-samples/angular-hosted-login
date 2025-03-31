@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     const baseUrl = ContextHolder.for(undefined as any).getContext().baseUrl;
-    window.location.href = `${baseUrl}/oauth/logout?post_logout_redirect_uri=http://localhost:4200`;
+    const currentHost = window.location.origin;
+    window.location.href = `${baseUrl}/oauth/logout?post_logout_redirect_uri=${currentHost}`;
   }
 }
