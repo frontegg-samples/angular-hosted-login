@@ -1,8 +1,8 @@
-![Angular Hosted Login Banner](/src/assets/angular-banner.png)
+![React Hosted Login Banner](/public/assets/react-banner.png)
 
-# Angular hosted login sample
+# React hosted login sample
 
-This sample showcases how to seamlessly add authentication and user management to your Angular app using Frontegg’s hosted login method.
+This sample showcases how to seamlessly add authentication and user management to your React app using Frontegg’s hosted login method.
 
 ## This app showcases
 
@@ -21,7 +21,6 @@ This sample showcases how to seamlessly add authentication and user management t
 You’ll also need a Frontegg account. [Sign up for free](https://frontegg-prod.us.frontegg.com/oauth/account/sign-up) to get started.
 
 Don’t have an account yet? No worries. This project includes **sandbox credentials** so you can test it right away!
-
 
 ## Get started in 3 simple steps
 
@@ -62,8 +61,8 @@ To start the application, run:
 npm start
 ```
 
-The app will be available at [http://localhost:4200](http://localhost:4200).
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-![Angular sample](/src/assets/sample-banner.png)
+![React sample](/public/assets/sample-react.png)
 
 ### Experience Frontegg in action!
