@@ -5,6 +5,7 @@ import { FronteggAuthService, ContextHolder } from '@frontegg/angular';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  standalone: false
 })
 export class HeaderComponent implements OnInit {
   isAuthenticated = false;
